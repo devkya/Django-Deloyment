@@ -21,3 +21,15 @@
     1. `ssh -i [키페어 경로] [유저 이름]@[퍼블릭 DNS 주소]`
         * init user name : ununtu   
         * public DNS Address : 생성된 인스턴스에서 확인 가능
+        
+
+3. EC2 기본 세팅
+    1. `sudo apt-get update` :  패키지 정보 업데이트
+    2. `sudo apt-get dist-upgrade` : 패키지 의존성 검사 및 업그레이드
+    3. `sudo apt-get install python3-pip`
+
+4. Github
+    > 파일 업로드 & 버젼 관리를 위해 github를 이용해 Clone 함
+    1. `sudo chown -R ubuntu:ununtu /srv/` : 클론을 위해 폴더 소유자 변경
+    2. `cd /srv`
+    3. `git clone [레포지토리 주소]`
