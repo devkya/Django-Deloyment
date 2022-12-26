@@ -90,4 +90,6 @@
     }
 
     ```
-4. 
+4. `sudo cp -f /srv/Django-Deloyment/backend/.confing/nginx/backend.conf /etc/nginx/sites-available/backend.conf` => `git pull` 이후 폴더에 있는 conf 파일 복사
+5. `sudo ln /etc/nginx/sites-available/backend.conf  /etc/nginx/sites-enabled/backend.conf` => `sites-enabled`로 링크
+6. 데몬 새로 고침(daemon-reload) 후 `gunicorn` 다시 실행
