@@ -1,5 +1,5 @@
 # Django 배포하기
-`Nginx`, `Gunicorn`, `EC2`, `MySQL` 을 사용하여 배포하기
+`Nginx`, `Gunicorn`, `Amazon EC2` +`Amazon RDS(MySQL)` 을 사용하여 배포하기
 
 
 ## Amazon EC2
@@ -99,4 +99,9 @@
 1. `STATIC_ROOT = os.path.join(BASE_DIR, 'static')` : `settings.py` 추가
 2. `python manage.py collecstatic`
 3. `backend.conf` 수정
-    
+
+
+## Domain 연결하기
+## Https 적용하기
+## Amazon RDS
+# Google translation AI Cloud
