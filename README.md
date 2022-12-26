@@ -82,14 +82,21 @@
         server_name *.compute.amazonaws.com;
         charset utf-8;
         client_max_body_size 128M;
-    
-        location / {
-            uwsgi_pass  unix:///tmp/mysite.sock;
-            include     uwsgi_params;
+ 
+    location / {
+        proxy_pass  http://0.0.0.0:8000;
         }
     }
+
 
     ```
 4. `sudo cp -f /srv/Django-Deloyment/backend/.confing/nginx/backend.conf /etc/nginx/sites-available/backend.conf` => `git pull` 이후 폴더에 있는 conf 파일 복사
 5. `sudo ln /etc/nginx/sites-available/backend.conf  /etc/nginx/sites-enabled/backend.conf` => `sites-enabled`로 링크
+6. `sudo service nginx restart`
 6. 데몬 새로 고침(daemon-reload) 후 `gunicorn` 다시 실행
+
+## STATIC & MEDIA
+1. `STATIC_ROOT = os.path.join(BASE_DIR, 'static')` : `settings.py` 추가
+2. `python manage.py collecstatic`
+3. `backend.conf` 수정
+    
