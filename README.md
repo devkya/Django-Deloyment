@@ -102,6 +102,11 @@
 
 
 ## Domain 연결하기
+
 ## Https 적용하기
+
 ## Amazon RDS
-# Google translation AI Cloud
+1. [Amazon RDS](https://ap-northeast-2.console.aws.amazon.com/rds/home) 접속
+2. 데이터베이스 생성
+3. Django 연동
+    * `pipenv install mysqlclient` => python 3.8 에러 발생 => python 3.10 정상 설치
